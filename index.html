@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css" >
+    <link rel="stylesheet" href="css/main.css" >
+    <title>CBR TASK</title>
+</head>
+<body>
+<div class="container">
+    <div class="row">
+        <div class="col-xs-12">
+            <h2>Введите количество граней для создания поля</h2>
+        </div>
+        <div class="col-lg-3 col-xs-12">
+            <input type="number" id="inputL" min="1" max="30" class="form-control" placeholder="L по диаганали">
+        </div>
+        <div class="col-lg-3 col-xs-12">
+            <input type="number" id="inputM" min="1" max="30"  class="form-control" placeholder="M в высоту">
+        </div>
+        <div class="col-lg-3 col-xs-12">
+            <input type="number" id="inputN" min="1" max="30" class="form-control" placeholder="N в ширину">
+        </div>
+        <div class="col-lg-3 col-xs-12">
+            <button class="btn btn-primary" id="createPole">Создать поле</button>
+        </div>
+
+    </div>
+    <div class="row mt-7 hidden" id="poleEdit">
+        <div class="col-lg-3 col-xs-12">
+            <button class="btn btn-success" id="machDomain">Посчитать домены</button>
+        </div>
+        <div class="col-lg-3 col-xs-12">
+            <input type="number" class="form-control" id="randValue" step="0.01" min="0.01" max="0.99">
+        </div>
+        <div class="col-lg-3 col-xs-12">
+            <button class="btn btn-success" id="autoCreate">АВТО</button>
+        </div>
+        <div class="col-xs-12 text-center mt-7">
+            <label id="alertText" class="alert alert-info">Найдено доменов: <span id="countDomain">0</span></label>
+        </div>
+
+    </div>
+
+</div>
+<div class="container-fluid text-center" id="poleCanvas"  style="margin-top: 50px; padding: 0 auto; display: none;">
+</div>
+<div class="container">
+    <div class="row" >
+        <div class="col-xs-12">
+            <div id="loader" class="row query-wrap" style="display: none">
+                <div  class="text-center" >
+                    <label><h2 style="margin-top: 0">Отрисовка...</h2></label>
+                    <div class="cssload-loader" >
+                        <div class="cssload-inner cssload-one"></div>
+                        <div class="cssload-inner cssload-two"></div>
+                        <div class="cssload-inner cssload-three"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-xs-12">
+            <table class="table table-bordered table-striped hidden" id="tableResult">
+                <thead>
+                <tr>
+                    <th rowspan="2">id</th>
+                    <th rowspan="2">Вероятность</th>
+                    <th colspan="2">Количество доменов в решётке</th>
+                    <th rowspan="2">Количество ячеек в решётке (L;N;M), из них имеющих значение 1</th>
+                </tr>
+                <tr>
+                    <th>всего</th>
+                    <th>из них неодносвязных</th>
+                </tr>
+                </thead>
+                <tbody id="tableResultBody">
+
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+<script src="js/jquery.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/sweetalert.min.js"></script>
+<script src="js/pixi.js"></script>
+<script src="js/PixiTextInput.js"></script>
+<script src="js/hexagon.js"></script>
+<script src="js/pixihelper.js"></script>
+<script src="js/main.js"></script>
+
+</body>
+</html>
