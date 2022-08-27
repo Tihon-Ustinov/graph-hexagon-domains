@@ -72,4 +72,4 @@
 
 
 
-Посмотреть решение можно по ссылке [GitHub Pages](https://tihon-ustinov.github.io/pixiHexagons/)
+Посмотреть решение можно по ссылке [GitHub Pages](https://tihon-ustinov.github.io/graph-hexagon-domains/)
